@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <learning_slider_index_index>
+        <reference name="content">
+            <block type="learning_slider/slider"  name="learning_slider.slider" template="learning/slider.phtml" />
+        </reference>
+    </learning_slider_index_index>
+</layout>
