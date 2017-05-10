@@ -38,7 +38,6 @@
 /app/code/core/
 /app/design/adminhtml/default/default/
 /app/design/frontend/base/
-/app/design/frontend/rwd/
 /app/design/frontend/default/
 /app/design/frontend/enterprise/
 /app/etc/modules/Enterprise_*.xml
