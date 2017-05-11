@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<config>
+    <menu>
+        <project_brand translate="title" module="project_brand">
+            <title>Brand</title>
+            <sort_order>70</sort_order>
+            <children>
+                <brand_brand translate="title" module="project_brand">
+                    <title>Manage Brands</title>
+                    <action>adminhtml/brand_brand</action>
+                    <sort_order>0</sort_order>
+                </brand_brand>
+            </children>
+        </project_brand>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <project_brand>
+                        <children>
+                            <brand_brand translate="title" module="project_brand">
+                                <title>Manage Brands</title>
+                                <sort_order>0</sort_order>
+                            </brand_brand>
+                        </children>
+                    </project_brand>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

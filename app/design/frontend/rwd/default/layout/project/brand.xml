@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <project_brand_index_index>
+        <reference name="head">
+            <action method="addJs"><script>project/jquery/jquery.bxslider.js</script></action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>project/js/scripts.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>project/css/style.css</name>
+            </action>
+        </reference>
+
+        <reference name="content">
+            <block type="project_brand/brand"  name="project_brand.brand" template="project/brand.phtml" />
+        </reference>
+    </project_brand_index_index>
+</layout>

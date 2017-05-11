@@ -1,0 +1,10 @@
+<?php $brands = $this->getBrands(); ?>
+<ul class="bxslider">
+
+    <?php foreach ($brands as $brand): ?>
+        <li>
+            <img src="<?php echo Mage::helper('project_brand')->getImageUrl($brand->getImageUrl()); ?>" title="<?php echo $brand->getName(); ?>">
+        </li>
+    <?php endforeach; ?>
+
+</ul>
