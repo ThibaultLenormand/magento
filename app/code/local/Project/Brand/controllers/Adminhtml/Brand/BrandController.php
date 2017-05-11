@@ -73,6 +73,10 @@ class Project_Brand_Adminhtml_Brand_BrandController extends Mage_Adminhtml_Contr
 
             try {
                 $brand->addData($data);
+                $products = $this->getRequest()->getPost('products', -1);
+                if ($products != -1) {
+                    $brand->setProductsData(Mage::helper('adminhtml/js')->decodeGridSerializedInput($products));
+                }
                 $brand->save();
 
                 Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('project_brand')->__('The brand has been saved.'));
@@ -202,5 +206,28 @@ class Project_Brand_Adminhtml_Brand_BrandController extends Mage_Adminhtml_Contr
             $image = $model->getData($imageAttr);
         }
         return $image;
+    }
+
+    protected function _initBrand()
+    {
+        $id = $this->getRequest()->getParam('id');
+        $brand = Mage::getModel('project_brand/brand')->load($id);
+        Mage::register('current_brand', $brand);
+    }
+
+    public function productsAction(){
+        $this->_initBrand(); //if you don't have such a method then replace it with something that will get you the entity you are editing.
+        $this->loadLayout();
+        $this->getLayout()->getBlock('brand.edit.tab.product')
+            ->setBrandProducts($this->getRequest()->getPost('brand_products', null));
+        $this->renderLayout();
+    }
+
+    public function productsgridAction(){
+        $this->_initBrand();
+        $this->loadLayout();
+        $this->getLayout()->getBlock('brand.edit.tab.product')
+            ->setBrandProducts($this->getRequest()->getPost('brand_products', null));
+        $this->renderLayout();
     }
 }

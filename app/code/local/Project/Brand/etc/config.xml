@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Project_Brand>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </Project_Brand>
     </modules>
     <global>
@@ -27,6 +27,9 @@
                     <brand>
                         <table>project_brand_brand</table>
                     </brand>
+                    <brand_product>
+                        <table>brand_product</table>
+                    </brand_product>
                 </entities>
             </project_brand_resource>
         </models>
