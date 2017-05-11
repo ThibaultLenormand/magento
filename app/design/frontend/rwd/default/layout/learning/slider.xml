@@ -12,7 +12,7 @@
                 <name>learning/css/style.css</name>
             </action>
         </reference>
-
+        
         <reference name="content">
             <block type="learning_slider/slider"  name="learning_slider.slider" template="learning/slider.phtml" />
         </reference>
