@@ -1,6 +1,11 @@
 <?php $brand = Mage::registry('brand'); ?>
 <?php $products = Mage::registry('products'); ?>
 
+<a href="<?php echo Mage::getBaseUrl(); ?>/brand">
+    <button>< Marques</button>
+</a>
+<br><br>
+
 <img src="<?php echo Mage::helper('project_brand')->getImageUrl($brand['image_url']);?>" alt="" style="width:100px; float:right">
 <h1><?php echo $brand['name'];?></h1>
 <br><hr><br>
@@ -32,5 +37,13 @@
     .product img {
         display: block;
         margin: 0 auto;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    button{
+        background-color: white;
+        border: 0; 
+        
     }
 </style>
