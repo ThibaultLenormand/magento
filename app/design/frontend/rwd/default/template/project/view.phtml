@@ -5,6 +5,9 @@
 <h1><?php echo $brand['name'];?></h1>
 <br><hr><br>
 <div class="products">
+   <?php if(count($products) == 0): ?>
+       <h3>No products to show :(</h3>
+   <?php endif ?>
     <?php foreach($products as $product): ?>
         <div class="product">
             <a href="<?php echo $product->getProductUrl();?>">
