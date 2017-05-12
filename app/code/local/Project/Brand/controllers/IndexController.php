@@ -17,19 +17,24 @@ class Project_Brand_IndexController extends Mage_Core_Controller_Front_Action
             return;
         }
         //Get brand
-        $brand = Mage::getResourceModel('project_brand/brand')->loadInstanceBySlug($slug);
-        if(!$brand){
+        $brand = Mage::getModel('project_brand/brand')->loadInstanceByAttribute($slug);
+        if($brand['entity_id'] == null){
             $this->norouteAction();
             return;
         }
+        //If brand disabled
+        if(!$brand['is_active']){
+            $this->norouteAction();
+            return;            
+        }
         //Get brand products
-        $brand['products'] = '';
+        $products = $brand->getSelectedProductsCollection();
         
         //Save $brand into registry
         Mage::register('brand', $brand);
+        Mage::register('products', $products);
         //Render view
         $this->loadLayout();
         $this->renderLayout();
-
     }
 }

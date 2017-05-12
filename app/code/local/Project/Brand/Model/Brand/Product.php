@@ -1,7 +1,6 @@
 <?php
 
-class Project_Brand_Model_Brand_Product
-    extends Mage_Core_Model_Abstract {
+class Project_Brand_Model_Brand_Product extends Mage_Core_Model_Abstract {
     protected function _construct(){
         $this->_init('project_brand/brand_product');
     }

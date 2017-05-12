@@ -21,15 +21,4 @@ class Project_Brand_Model_Resource_Brand_Collection extends Mage_Core_Model_Reso
 
         return $this;
     }
-
-    /**
-     * Create SLUG from name
-     *
-     * @return Project_Brand_Model_Resource_Brand_Collection
-     */
-    public function slugify()
-    {
-        return null;
-    }
-
 }
