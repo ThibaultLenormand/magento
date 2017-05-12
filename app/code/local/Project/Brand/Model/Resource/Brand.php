@@ -37,8 +37,6 @@ class Project_Brand_Model_Resource_Brand extends Mage_Core_Model_Resource_Db_Abs
 
     public function loadInstanceBySlug($slug)
     {
-        var_dump($slug);
-
         $reader = $this->_getReadAdapter();
         $select = $reader->select()->from($this->getMainTable())->where('slug = ?', $slug);
 

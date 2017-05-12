@@ -1,1 +1,8 @@
-<?php  ?>
+<?php $brand = Mage::registry('brand'); ?>
+<h1><?php echo $brand['name'];?></h1>
+<img src="<?php echo Mage::helper('project_brand')->getImageUrl($brand['image_url']);?>" alt="" style="width:100px">
+
+
+
+
+<pre><?php print_r($brand); ?></pre>
