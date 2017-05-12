@@ -63,6 +63,13 @@
                     <frontName>brand</frontName>
                 </args>
             </project_brand>
+            <project_brand_view>
+                <use>standard</use>
+                <args>
+                    <module>Project_Brand</module>
+                    <frontName>view</frontName>
+                </args>
+            </project_brand_view>
         </routers>
         <layout>
             <updates>
